@@ -31,7 +31,6 @@ def get_train_files(filename):
 def read_image(img_path):
     try:
         img = Image.open(img_path)
-        # print(img_name, np.std(img), np.mean(img))
 
         # np.mean(img)输出为一个值 如：148
         # 值越接近255，则 图片越接近全白，此处选取210作为阈值
@@ -42,7 +41,7 @@ def read_image(img_path):
             img = img.resize([224, 224], Image.ANTIALIAS)
             # print(np.std(img), np.mean(img))
             data = np.array(img)
-            print(img_path)
+            # print(img_path)
     except:
         print("error: " + img_path)
         data = 'a'
