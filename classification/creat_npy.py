@@ -64,6 +64,8 @@ def get_batches(image_list, label_list):
 
 
 def get_data(filepath, name_x, name_y):
+    # name_x,name_y 为保存路径
+    # x 为数据， y为标签
     try:
         x = np.load('array111.npy')
         # x 对应为数据
@@ -81,6 +83,4 @@ def get_data(filepath, name_x, name_y):
     return x, y
 
 
-
-for tis in os.listdir("E:\BaiduNetdiskDownload\第二批归一化\对照组"):
-    get_data("E:\BaiduNetdiskDownload\第二批归一化\对照组//" + tis, "train_data/"+tis + "_x", "train_data/"+tis + "_y")
+get_data("E:\BaiduNetdiskDownload\第二批归一化\对照组//" + tis, "train_data/"+tis + "_x", "train_data/"+tis + "_y")
