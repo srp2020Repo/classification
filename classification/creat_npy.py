@@ -73,6 +73,7 @@ def get_data(filepath, name_x, name_y):
     except:
         # filepath = r"E:\BaiduNetdiskDownload\第二批归一化\对照组"
         train_x, train_y = get_train_files(filepath)
+        # 此时的train_x,train_y 是列表，里面分别为图片的地址和标签
         x, y = get_batches(train_x, train_y)
         # 保存成npy文件
         np.save(name_x, x)
